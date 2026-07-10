@@ -81,7 +81,7 @@
   <a href="#h2">Paso 2 · H2</a>
   <a href="#h3">Paso 3 · H3</a>
   <a href="#regiones">Las 3 regiones</a>
-  <a href="#peso">¿Por qué pesa?</a>
+  <a href="#descarga">Descarga</a>
   <a href="#estructura">Estructura</a>
 </nav>
 
@@ -208,25 +208,19 @@
   </p>
 </section>
 
-<section id="peso">
-  <h2>¿Por qué pesaba tanto? ¿Cómo se bajó?</h2>
-  <p><strong>Loreto no se “comprimió mágicamente”</strong>: su GDB siempre fue chica (~30 MB).
-  El sistema de 3 regiones se hinchaba por la <strong>ZEE completa de San Martín</strong> y la
-  <strong>grilla/capas extras de Cusco</strong>.</p>
+<section id="descarga">
+  <h2>Descarga y espacio en disco</h2>
+  <p>El sistema completo (San Martín, Loreto y Cusco) ocupa aproximadamente <strong>180 MB</strong>.
+  Si solo trabaja en una región, puede quedarse únicamente con esa carpeta.</p>
   <table>
-    <tr><th>Qué</th><th>Antes</th><th>Ahora (mínimo real)</th></tr>
-    <tr><td>GDB Loreto</td><td>~36 MB</td><td><strong>~29 MB</strong></td></tr>
-    <tr><td>GDB San Martín monitoreo</td><td>~41 MB</td><td><strong>~14 MB</strong></td></tr>
-    <tr><td>GDB San Martín ZEE</td><td><strong>~494 MB</strong></td><td><strong>~9 MB</strong> (solo centros poblados)</td></tr>
-    <tr><td>GDB Cusco</td><td><strong>~316 MB</strong></td><td><strong>~26 MB</strong> (grilla recortada a ACR)</td></tr>
-    <tr><td><strong>Total GDB</strong></td><td>~887 MB</td><td><strong>~77 MB</strong></td></tr>
-    <tr><td><strong>Producto limpio (3 regiones)</strong></td><td>~3 GB con basura de trabajo</td><td><strong>~180 MB</strong></td></tr>
+    <tr><th>Región</th><th>Carpeta</th><th>Tamaño aproximado</th></tr>
+    <tr><td><strong>Loreto</strong></td><td><code>regiones/ATD_Loreto/</code></td><td>~45 MB</td></tr>
+    <tr><td><strong>San Martín</strong></td><td><code>regiones/ATD_San_Martin/</code></td><td>~65 MB</td></tr>
+    <tr><td><strong>Cusco</strong></td><td><code>regiones/ATD_Cuzco/</code></td><td>~67 MB</td></tr>
   </table>
-  <div class="note">
-    <strong>Qué se hizo:</strong> en ZEE SM se dejaron solo los centros poblados que usa el PDF;
-    en Cusco se eliminaron capas que el toolbox no usa y se recortó <code>gpo_exa</code> al ámbito ACR (+5 km);
-    se vació <code>MonitoreoDeforestacion</code> (se descarga con H1). Los PDF/imágenes de trabajo
-    <strong>no van a GitHub</strong>.
+  <div class="ok">
+    Cada carpeta incluye lo necesario para monitorear: herramientas, datos base, logos, guía y un PDF de ejemplo.
+    Los reportes e imágenes que usted genere después se guardan en su equipo y no vienen en la descarga.
   </div>
 </section>
 

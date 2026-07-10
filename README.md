@@ -23,7 +23,7 @@
   <a href="#para-quién-es">Para quién es</a> ·
   <a href="#cómo-trabajar-en-3-pasos">Cómo trabajar</a> ·
   <a href="#las-tres-regiones">Las 3 regiones</a> ·
-  <a href="#por-qué-pesa-tanto">¿Por qué pesa?</a> ·
+  <a href="#descarga-y-espacio-en-disco">Descarga</a> ·
   <a href="#qué-incluye-cada-paquete">Qué incluye</a>
 </p>
 
@@ -108,46 +108,38 @@ Las tres tienen **toolbox H1–H2–H3**, GDB, logos, guía y PDF de ejemplo. Lo
 
 ---
 
-## ¿Por qué pesaba tanto? (y cómo se bajó)
+## Descarga y espacio en disco
 
-**Pregunta frecuente:** el repo solo Loreto pesaba ~25–35 MB; ¿por qué el de 3 regiones llegaba a ~3 GB?
+Cada región es un paquete listo para trabajar. El repositorio completo (las tres regiones) ocupa aproximadamente **180 MB**.
 
-### Cómo se “aligeró” Loreto
-Loreto **ya era liviano**: su GDB de línea base ronda **~30 MB**. En el paquete de taller además se deja `MonitoreoDeforestacion` vacío (las alertas se bajan con H1). No había una GDB de cartografía regional de medio gigabyte.
+| Si trabaja en… | Carpeta | Tamaño aproximado |
+|----------------|---------|------------------:|
+| **Loreto** | `regiones/ATD_Loreto/` | ~45 MB |
+| **San Martín** | `regiones/ATD_San_Martin/` | ~65 MB |
+| **Cusco** | `regiones/ATD_Cuzco/` | ~67 MB |
 
-### De dónde salía el peso de las 3 regiones
-| Qué | Antes | Ahora (mínimo real) |
-|-----|------:|--------------------:|
-| GDB Loreto | ~36 MB | **~29 MB** |
-| GDB San Martín (monitoreo) | ~41 MB | **~14 MB** |
-| GDB San Martín ZEE (cartografía) | **~494 MB** | **~9 MB** (solo centros poblados que usa el PDF) |
-| GDB Cusco | **~316 MB** | **~26 MB** (grilla recortada a ACR; capas no usadas eliminadas) |
-| **Total GDB 3 regiones** | **~887 MB** | **~77 MB** |
+**Consejo:** si solo necesita una región, descargue el ZIP del repositorio y conserve únicamente la carpeta de su región; las otras puede eliminarlas en su equipo.
 
-### Qué NO se sube a GitHub (resultados de trabajo)
-- `pdfs/` generados por usted  
-- `imagenes_sentinel/` del visor  
-- `mapas/` y `documentacion_atd/` temporales  
+### Qué encontrará en su carpeta
+Herramientas H1–H2–H3, geodatabases de trabajo, logos institucionales, guía de uso y un PDF de ejemplo.
 
-Esos archivos pueden hacer que la carpeta local se vea de **varios GB**, pero **no forman parte del producto** en el repositorio.
-
-### Peso real del producto (estructura limpia)
-Con GDB aligeradas + sin resultados de trabajo, el contenido útil ronda **toolbox + logos + guías + GDB (~77 MB) + PDF de ejemplo (~90 MB)** ≈ **~200–250 MB** en disco limpio (más logos/docs). El resto era cartografía/grillas sobrantes o salidas de corridas.
+### Qué se genera al usar el sistema
+Al fotointerpretar y emitir reportes, ArcGIS Pro creará archivos en `pdfs/`, `imagenes_sentinel/` y carpetas similares. Esos archivos son **suyos** (resultados de su monitoreo) y pueden ocupar más espacio con el tiempo; no forman parte de la descarga inicial.
 
 
 ---
 
 ## Qué incluye cada paquete
 
-| Carpeta | ¿En GitHub? | Contenido |
-|---------|:-----------:|-----------|
+| Carpeta | En la descarga | Contenido |
+|---------|:--------------:|-----------|
 | `toolbox/` | Sí | H1, H2, H3 |
 | `GDB/` | Sí | Datos base de la región |
 | `logos/` | Sí | Logos del informe |
 | `guia/` · `docs/` | Sí | Guías + 1 PDF de ejemplo |
-| `pdfs/` | **No** | Reportes que usted genere |
-| `imagenes_sentinel/` | **No** | Exportaciones del visor |
-| `mapas/` · `documentacion_atd/` | **No** | Salidas temporales |
+| `pdfs/` | Se crea al trabajar | Reportes que usted genere |
+| `imagenes_sentinel/` | Se crea al trabajar | Exportaciones del visor |
+| `mapas/` · `documentacion_atd/` | Se crea al trabajar | Archivos de apoyo temporales |
 
 ### Estado verificado
 
