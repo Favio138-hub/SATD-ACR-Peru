@@ -14,8 +14,9 @@
 </p>
 
 <p align="center">
-  <a href="docs/GUIA_VISUAL.html"><strong>Abrir guía visual completa (con capturas H1 · H2 · H3)</strong></a><br/>
-  <a href="INDICE.html">Índice del sistema</a>
+  <a href="https://favio138-hub.github.io/SATD-ACR-Peru/docs/GUIA_VISUAL.html"><strong>Abrir guía visual completa (con capturas H1 · H2 · H3)</strong></a><br/>
+  <a href="https://favio138-hub.github.io/SATD-ACR-Peru/INDICE.html">Índice del sistema</a><br/>
+  <sub>Si el enlace aún no carga: <a href="https://html-preview.github.io/?url=https://raw.githubusercontent.com/Favio138-hub/SATD-ACR-Peru/main/docs/GUIA_VISUAL.html">vista previa HTML</a> · o abra <code>INDICE.html</code> en su PC</sub>
 </p>
 
 <p align="center">
@@ -107,23 +108,32 @@ Las tres tienen **toolbox H1–H2–H3**, GDB, logos, guía y PDF de ejemplo. Lo
 
 ---
 
-## ¿Por qué pesa tanto?
+## ¿Por qué pesaba tanto? (y cómo se bajó)
 
-**Pregunta frecuente:** el repo solo Loreto pesaba ~25–35 MB; ¿por qué el de 3 regiones llega a ~3 GB?
+**Pregunta frecuente:** el repo solo Loreto pesaba ~25–35 MB; ¿por qué el de 3 regiones llegaba a ~3 GB?
 
-**Respuesta corta:** no es que se hayan subido resultados de trabajo. Loreto es liviano; **Cusco y San Martín traen geodatabases mucho más grandes**.
+### Cómo se “aligeró” Loreto
+Loreto **ya era liviano**: su GDB de línea base ronda **~30 MB**. En el paquete de taller además se deja `MonitoreoDeforestacion` vacío (las alertas se bajan con H1). No había una GDB de cartografía regional de medio gigabyte.
 
-| Qué | Peso aprox. | Nota |
-|-----|-------------|------|
-| **Repo solo Loreto** ([ATD-Loreto-GFP](https://github.com/Favio138-hub/ATD-Loreto-GFP)) | **~25–35 MB** | GDB Loreto ≈ 36 MB + toolbox + logos |
-| GDB Loreto | ≈ 36 MB | Liviana |
-| GDB San Martín (monitoreo) | ≈ 41 MB | Similar a Loreto |
-| GDB San Martín **ZEE / cartografía** | **≈ 494 MB** | La más pesada de SM |
-| GDB Cusco | **≈ 316 MB** | Histórico / capas más densas |
-| PDF de ejemplo (3 regiones) | ≈ 90 MB | Un ejemplo por región en `docs/` |
-| **Sistema completo en disco** | **≈ 2,9 GB** | Suma de lo anterior |
+### De dónde salía el peso de las 3 regiones
+| Qué | Antes | Ahora (mínimo real) |
+|-----|------:|--------------------:|
+| GDB Loreto | ~36 MB | **~29 MB** |
+| GDB San Martín (monitoreo) | ~41 MB | **~14 MB** |
+| GDB San Martín ZEE (cartografía) | **~494 MB** | **~9 MB** (solo centros poblados que usa el PDF) |
+| GDB Cusco | **~316 MB** | **~26 MB** (grilla recortada a ACR; capas no usadas eliminadas) |
+| **Total GDB 3 regiones** | **~887 MB** | **~77 MB** |
 
-Los PDF e imágenes que usted genere al trabajar (`pdfs/`, `imagenes_sentinel/`, etc.) **no se suben a GitHub**.
+### Qué NO se sube a GitHub (resultados de trabajo)
+- `pdfs/` generados por usted  
+- `imagenes_sentinel/` del visor  
+- `mapas/` y `documentacion_atd/` temporales  
+
+Esos archivos pueden hacer que la carpeta local se vea de **varios GB**, pero **no forman parte del producto** en el repositorio.
+
+### Peso real del producto (estructura limpia)
+Con GDB aligeradas + sin resultados de trabajo, el contenido útil ronda **toolbox + logos + guías + GDB (~77 MB) + PDF de ejemplo (~90 MB)** ≈ **~200–250 MB** en disco limpio (más logos/docs). El resto era cartografía/grillas sobrantes o salidas de corridas.
+
 
 ---
 

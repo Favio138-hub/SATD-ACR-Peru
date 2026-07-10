@@ -209,50 +209,24 @@
 </section>
 
 <section id="peso">
-  <h2>¿Por qué el sistema pesa ~3 GB y Loreto solo ~25–35 MB?</h2>
-  <p>No es que “las tres regiones multipliquen el mismo peso”. Loreto es liviano; <strong>Cusco y San Martín traen geodatabases mucho más grandes</strong>.</p>
+  <h2>¿Por qué pesaba tanto? ¿Cómo se bajó?</h2>
+  <p><strong>Loreto no se “comprimió mágicamente”</strong>: su GDB siempre fue chica (~30 MB).
+  El sistema de 3 regiones se hinchaba por la <strong>ZEE completa de San Martín</strong> y la
+  <strong>grilla/capas extras de Cusco</strong>.</p>
   <table>
-    <tr><th>Qué</th><th>Peso aproximado</th><th>Explicación</th></tr>
-    <tr>
-      <td><strong>Repo solo Loreto</strong> (ATD-Loreto-GFP)</td>
-      <td><strong>~25–35 MB</strong></td>
-      <td>GDB Loreto ≈ 36 MB + toolbox + logos + docs. Los PDF/imágenes de trabajo <em>no</em> van a GitHub.</td>
-    </tr>
-    <tr>
-      <td>GDB Loreto (línea base + gestión)</td>
-      <td>≈ 36 MB</td>
-      <td>Base liviana, lista para talleres.</td>
-    </tr>
-    <tr>
-      <td>GDB San Martín (monitoreo)</td>
-      <td>≈ 41 MB</td>
-      <td>Similar a Loreto.</td>
-    </tr>
-    <tr>
-      <td>GDB San Martín <strong>ZEE / cartografía base</strong></td>
-      <td><strong>≈ 494 MB</strong></td>
-      <td>Cartografía regional pesada (centros poblados, etc.). Es el mayor peso de SM.</td>
-    </tr>
-    <tr>
-      <td>GDB Cusco (línea base)</td>
-      <td><strong>≈ 316 MB</strong></td>
-      <td>Incluye más capas/histórico; por eso Cusco sola ya supera a Loreto.</td>
-    </tr>
-    <tr>
-      <td>PDF de ejemplo (3 regiones)</td>
-      <td>≈ 90 MB</td>
-      <td>Un ejemplo por región en <code>docs/</code> (no son resultados de trabajo).</td>
-    </tr>
-    <tr>
-      <td><strong>Sistema completo (3 regiones)</strong></td>
-      <td><strong>≈ 2,9 GB en disco</strong></td>
-      <td>Suma de las GDB grandes + ejemplos. En GitHub parte va por Git LFS.</td>
-    </tr>
+    <tr><th>Qué</th><th>Antes</th><th>Ahora (mínimo real)</th></tr>
+    <tr><td>GDB Loreto</td><td>~36 MB</td><td><strong>~29 MB</strong></td></tr>
+    <tr><td>GDB San Martín monitoreo</td><td>~41 MB</td><td><strong>~14 MB</strong></td></tr>
+    <tr><td>GDB San Martín ZEE</td><td><strong>~494 MB</strong></td><td><strong>~9 MB</strong> (solo centros poblados)</td></tr>
+    <tr><td>GDB Cusco</td><td><strong>~316 MB</strong></td><td><strong>~26 MB</strong> (grilla recortada a ACR)</td></tr>
+    <tr><td><strong>Total GDB</strong></td><td>~887 MB</td><td><strong>~77 MB</strong></td></tr>
+    <tr><td><strong>Producto limpio (3 regiones)</strong></td><td>~3 GB con basura de trabajo</td><td><strong>~180 MB</strong></td></tr>
   </table>
   <div class="note">
-    <strong>Resumen:</strong> Loreto ≈ 30 MB porque su GDB es chica.
-    El sistema de 3 regiones pesa casi 3 GB sobre todo por la <strong>ZEE de San Martín (~0,5 GB)</strong>
-    y la <strong>GDB de Cusco (~0,3 GB)</strong>, no porque se hayan subido “resultados” de trabajo.
+    <strong>Qué se hizo:</strong> en ZEE SM se dejaron solo los centros poblados que usa el PDF;
+    en Cusco se eliminaron capas que el toolbox no usa y se recortó <code>gpo_exa</code> al ámbito ACR (+5 km);
+    se vació <code>MonitoreoDeforestacion</code> (se descarga con H1). Los PDF/imágenes de trabajo
+    <strong>no van a GitHub</strong>.
   </div>
 </section>
 

@@ -1,1 +1,2 @@
+# Geodatabases ArcGIS (tablas >100 MB en ZEE San Martín)
 *.gdbtable filter=lfs diff=lfs merge=lfs -text
