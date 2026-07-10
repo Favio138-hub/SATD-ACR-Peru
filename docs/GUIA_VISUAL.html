@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía visual ATD — San Martín, Loreto y Cusco</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #1a2b3c; background: #eef3f8; line-height: 1.5; }
+  header {
+    background: linear-gradient(135deg, #1e4d7b, #2F5F8F 55%, #3d7ab5);
+    color: #fff; text-align: center; padding: 36px 20px 28px;
+  }
+  header h1 { margin: 0; font-size: 1.45rem; max-width: 900px; margin-inline: auto; }
+  header p { margin: 10px 0 0; opacity: .95; }
+  nav {
+    background: #fff; border-bottom: 1px solid #d0dce8; position: sticky; top: 0; z-index: 10;
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 10px 12px;
+  }
+  nav a {
+    text-decoration: none; color: #2F5F8F; font-weight: 600; font-size: .92rem;
+    padding: 6px 12px; border-radius: 999px; background: #eef4fa;
+  }
+  nav a:hover { background: #2F5F8F; color: #fff; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+  section {
+    background: #fff; border-radius: 12px; padding: 24px 22px;
+    margin-bottom: 22px; box-shadow: 0 2px 10px rgba(30,60,90,.07);
+  }
+  h2 { margin: 0 0 12px; color: #1e4d7b; font-size: 1.25rem; }
+  h3 { margin: 18px 0 8px; color: #2F5F8F; font-size: 1.05rem; }
+  .badge {
+    display: inline-block; background: #2F5F8F; color: #fff; font-weight: 700;
+    border-radius: 6px; padding: 2px 10px; margin-right: 6px; font-size: .85rem;
+  }
+  .badge.h2 { background: #1565C0; }
+  .badge.h3 { background: #C62828; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .card {
+    border: 1px solid #d5e2ef; border-radius: 10px; padding: 16px; background: #f8fbfe;
+  }
+  .card h4 { margin: 0 0 6px; }
+  .card p { margin: 0; color: #4a5b6c; font-size: .92rem; }
+  .shot {
+    display: block; width: 100%; max-width: 920px; margin: 14px auto;
+    border: 1px solid #c8d6e5; border-radius: 8px; box-shadow: 0 4px 14px rgba(20,40,70,.12);
+  }
+  .caption { text-align: center; color: #5a6b7d; font-size: .9rem; margin: -4px 0 16px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  th, td { border: 1px solid #d0dce8; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #e8f0f8; color: #1e4d7b; }
+  .note {
+    background: #fff8e6; border-left: 4px solid #f0b429; padding: 12px 14px; border-radius: 0 8px 8px 0;
+    margin: 14px 0;
+  }
+  .ok {
+    background: #eefaf1; border-left: 4px solid #2E7D32; padding: 12px 14px; border-radius: 0 8px 8px 0;
+    margin: 14px 0;
+  }
+  ol.pasos { padding-left: 1.2rem; }
+  ol.pasos li { margin: 8px 0; }
+  footer { text-align: center; color: #7a8a9a; font-size: .85rem; margin-top: 10px; }
+  a.btn {
+    display: inline-block; margin: 4px 6px 4px 0; padding: 9px 14px; border-radius: 6px;
+    background: #2F5F8F; color: #fff; text-decoration: none; font-weight: 600; font-size: .9rem;
+  }
+  a.btn.alt { background: #fff; color: #2F5F8F; border: 2px solid #2F5F8F; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Guía visual del Sistema ATD ACR</h1>
+  <p>San Martín · Loreto · Cusco — mismo flujo en las tres regiones</p>
+  <p style="margin-top:8px;font-size:.95rem;">Para personal de ACR · No necesita ser programador</p>
+</header>
+
+<nav>
+  <a href="#para-quien">Para quién</a>
+  <a href="#flujo">Flujo H1→H2→H3</a>
+  <a href="#h1">Paso 1 · H1</a>
+  <a href="#h2">Paso 2 · H2</a>
+  <a href="#h3">Paso 3 · H3</a>
+  <a href="#regiones">Las 3 regiones</a>
+  <a href="#peso">¿Por qué pesa?</a>
+  <a href="#estructura">Estructura</a>
+</nav>
+
+<div class="wrap">
+
+<section id="para-quien">
+  <h2>Para quién es este sistema</h2>
+  <p>Está pensado para el <strong>personal de cada Área de Conservación Regional (ACR)</strong> y equipos de monitoreo que necesitan:</p>
+  <ol class="pasos">
+    <li>Bajar las alertas de deforestación del periodo</li>
+    <li>Revisarlas con imágenes satelitales (antes / después)</li>
+    <li>Generar el <strong>reporte PDF oficial</strong></li>
+  </ol>
+  <div class="ok">
+    <strong>Importante:</strong> el flujo es <em>igual</em> en San Martín, Loreto y Cusco.
+    Solo cambia la carpeta de su región. Loreto es el ejemplo más documentado, pero las tres regiones trabajan igual.
+  </div>
+</section>
+
+<section id="flujo">
+  <h2>El trabajo en 3 pasos (todas las regiones)</h2>
+  <div class="grid3">
+    <div class="card">
+      <h4><span class="badge">H1</span> Geobosques</h4>
+      <p>Descarga las alertas y las guarda en la base de datos de su región.</p>
+    </div>
+    <div class="card">
+      <h4><span class="badge h2">H2</span> Visor satelital</h4>
+      <p>Compara imágenes ANTES y DESPUÉS y clasifica la alerta.</p>
+    </div>
+    <div class="card">
+      <h4><span class="badge h3">H3</span> Reporte PDF</h4>
+      <p>Genera el informe técnico institucional listo para entregar.</p>
+    </div>
+  </div>
+  <p style="margin-top:16px;text-align:center;font-weight:600;color:#1e4d7b;">
+    Alertas (H1) → Fotointerpretación (H2) → Informe PDF (H3)
+  </p>
+</section>
+
+<section id="h1">
+  <h2><span class="badge">H1</span> Descargar alertas (Geobosques)</h2>
+  <p>En ArcGIS Pro abra la herramienta <strong>Descarga automatizada de Alertas Tempranas de Deforestación</strong>.
+  Elija la GDB de su región, el año y el periodo. El resto de capas suele venir ya configurado.</p>
+  <img class="shot" src="guia/guia_h1_descarga_geobosques.png" alt="Herramienta H1 — parámetros de descarga Geobosques en ArcGIS Pro" />
+  <p class="caption">Figura 1. Herramienta H1 en ArcGIS Pro (parámetros). Igual en las tres regiones.</p>
+  <h3>Qué debe hacer usted</h3>
+  <ol class="pasos">
+    <li>Abrir la carpeta de <strong>su región</strong> en ArcGIS Pro</li>
+    <li>Agregar el toolbox H1</li>
+    <li>Indicar la GDB de línea base de su región</li>
+    <li>Elegir año y fechas del periodo</li>
+    <li>Ejecutar — las alertas quedan en <code>MonitoreoDeforestacion</code></li>
+  </ol>
+</section>
+
+<section id="h2">
+  <h2><span class="badge h2">H2</span> Fotointerpretar (visor satelital)</h2>
+  <p>El visor GFP permite marcar una escena <strong>ANTES</strong> y otra <strong>DESPUÉS</strong>.
+  Al tener ambas, carga la comparación automáticamente. Sirve para decidir si la alerta es antrópica, natural o falsa alerta.</p>
+  <img class="shot" src="guia/guia_h2_visor_antes_despues.png" alt="Visor satelital H2 — comparación antes y después" />
+  <p class="caption">Figura 2. Visor H2 — comparación ANTES / DESPUÉS con la alerta marcada en rojo.</p>
+  <img class="shot" src="guia/guia_h2_visor_detalle.png" alt="Visor satelital H2 — detalle de zoom sincronizado" />
+  <p class="caption">Figura 3. Mismo visor con zoom sincronizado para revisar el cambio con detalle.</p>
+  <h3>Qué debe hacer usted</h3>
+  <ol class="pasos">
+    <li>Seleccionar la alerta en el mapa</li>
+    <li>Buscar escenas Sentinel-2 (u otra fuente)</li>
+    <li>Marcar una como ANTES y otra como DESPUÉS</li>
+    <li>Completar causa y confianza</li>
+    <li>Exportar imágenes (alimentan el PDF del paso 3)</li>
+  </ol>
+</section>
+
+<section id="h3">
+  <h2><span class="badge h3">H3</span> Generar el reporte PDF</h2>
+  <p>El resultado final es el <strong>Reporte Técnico sobre Alerta Temprana de Deforestación</strong>:
+  ubicación, mapa, imágenes satelitales, datos de afectación y logos institucionales.</p>
+  <img class="shot" src="guia/guia_h3_reporte_pdf.png" alt="Ejemplo de reporte PDF ATD generado con H3" />
+  <p class="caption">Figura 4. Ejemplo de reporte PDF institucional (salida de H3). El formato es el mismo en las tres regiones; cambian logos y datos de la ACR.</p>
+  <h3>Qué debe hacer usted</h3>
+  <ol class="pasos">
+    <li>Ejecutar <strong>Diagnóstico Pre-Vuelo</strong> (valida logos y entorno)</li>
+    <li>Ejecutar <strong>Generar Reporte ATD</strong> con la alerta ya interpretada</li>
+    <li>El PDF se guarda en la carpeta <code>pdfs/</code> de su región</li>
+  </ol>
+  <div class="note">
+    Los PDF que usted genere en <code>pdfs/</code> son <strong>resultados de trabajo</strong> y
+    <strong>no se suben a GitHub</strong>. En el repositorio solo hay un PDF de ejemplo por región (en <code>docs/</code>).
+  </div>
+</section>
+
+<section id="regiones">
+  <h2>Las tres regiones (mismo sistema)</h2>
+  <table>
+    <tr>
+      <th>Región</th>
+      <th>ACR</th>
+      <th>Carpeta</th>
+      <th>Guía regional</th>
+    </tr>
+    <tr>
+      <td><strong>Loreto</strong></td>
+      <td>Ampiyacu, Tamshiyacu Tahuayo, Maijuna Kichwa, Alto Nanay</td>
+      <td><code>regiones/ATD_Loreto/</code></td>
+      <td><a href="../regiones/ATD_Loreto/guia/GUIA_ATD_LORETO.html">Abrir guía</a></td>
+    </tr>
+    <tr>
+      <td><strong>San Martín</strong></td>
+      <td>Cordillera Escalera (CE), BOSHUMI</td>
+      <td><code>regiones/ATD_San_Martin/</code></td>
+      <td><a href="../regiones/ATD_San_Martin/guia/GUIA_ATD_SAN_MARTIN.html">Abrir guía</a></td>
+    </tr>
+    <tr>
+      <td><strong>Cusco</strong></td>
+      <td>Choquequirao, Chuyapi Urusayhua, Q'eros Kosnipata</td>
+      <td><code>regiones/ATD_Cuzco/</code></td>
+      <td><a href="../regiones/ATD_Cuzco/guia/GUIA_ATD_CUZCO.html">Abrir guía</a></td>
+    </tr>
+  </table>
+  <p style="margin-top:14px;">
+    <a class="btn" href="../INDICE.html">Volver al índice</a>
+    <a class="btn alt" href="../README.md">Ver README</a>
+  </p>
+</section>
+
+<section id="peso">
+  <h2>¿Por qué el sistema pesa ~3 GB y Loreto solo ~25–35 MB?</h2>
+  <p>No es que “las tres regiones multipliquen el mismo peso”. Loreto es liviano; <strong>Cusco y San Martín traen geodatabases mucho más grandes</strong>.</p>
+  <table>
+    <tr><th>Qué</th><th>Peso aproximado</th><th>Explicación</th></tr>
+    <tr>
+      <td><strong>Repo solo Loreto</strong> (ATD-Loreto-GFP)</td>
+      <td><strong>~25–35 MB</strong></td>
+      <td>GDB Loreto ≈ 36 MB + toolbox + logos + docs. Los PDF/imágenes de trabajo <em>no</em> van a GitHub.</td>
+    </tr>
+    <tr>
+      <td>GDB Loreto (línea base + gestión)</td>
+      <td>≈ 36 MB</td>
+      <td>Base liviana, lista para talleres.</td>
+    </tr>
+    <tr>
+      <td>GDB San Martín (monitoreo)</td>
+      <td>≈ 41 MB</td>
+      <td>Similar a Loreto.</td>
+    </tr>
+    <tr>
+      <td>GDB San Martín <strong>ZEE / cartografía base</strong></td>
+      <td><strong>≈ 494 MB</strong></td>
+      <td>Cartografía regional pesada (centros poblados, etc.). Es el mayor peso de SM.</td>
+    </tr>
+    <tr>
+      <td>GDB Cusco (línea base)</td>
+      <td><strong>≈ 316 MB</strong></td>
+      <td>Incluye más capas/histórico; por eso Cusco sola ya supera a Loreto.</td>
+    </tr>
+    <tr>
+      <td>PDF de ejemplo (3 regiones)</td>
+      <td>≈ 90 MB</td>
+      <td>Un ejemplo por región en <code>docs/</code> (no son resultados de trabajo).</td>
+    </tr>
+    <tr>
+      <td><strong>Sistema completo (3 regiones)</strong></td>
+      <td><strong>≈ 2,9 GB en disco</strong></td>
+      <td>Suma de las GDB grandes + ejemplos. En GitHub parte va por Git LFS.</td>
+    </tr>
+  </table>
+  <div class="note">
+    <strong>Resumen:</strong> Loreto ≈ 30 MB porque su GDB es chica.
+    El sistema de 3 regiones pesa casi 3 GB sobre todo por la <strong>ZEE de San Martín (~0,5 GB)</strong>
+    y la <strong>GDB de Cusco (~0,3 GB)</strong>, no porque se hayan subido “resultados” de trabajo.
+  </div>
+</section>
+
+<section id="estructura">
+  <h2>Estructura limpia (qué sí / qué no va a GitHub)</h2>
+  <table>
+    <tr><th>Carpeta</th><th>¿Se sube?</th><th>Para qué</th></tr>
+    <tr><td><code>toolbox/</code></td><td>Sí</td><td>Herramientas H1, H2, H3</td></tr>
+    <tr><td><code>GDB/</code></td><td>Sí</td><td>Datos base de la región</td></tr>
+    <tr><td><code>logos/</code></td><td>Sí</td><td>Logos del PDF</td></tr>
+    <tr><td><code>guia/</code> y <code>docs/</code></td><td>Sí</td><td>Guías y un PDF de ejemplo</td></tr>
+    <tr><td><code>pdfs/</code></td><td><strong>No</strong></td><td>Reportes que usted genere (resultados)</td></tr>
+    <tr><td><code>imagenes_sentinel/</code></td><td><strong>No</strong></td><td>Imágenes exportadas del visor</td></tr>
+    <tr><td><code>mapas/</code> · <code>documentacion_atd/</code></td><td><strong>No</strong></td><td>Salidas temporales de trabajo</td></tr>
+  </table>
+  <div class="ok">
+    Así el repositorio queda con la <strong>estructura del producto</strong>, no con la basura de cada corrida.
+  </div>
+</section>
+
+<footer>
+  GFP Subnacional 2026 · Sistema ATD ACR · San Martín, Loreto y Cusco
+</footer>
+</div>
+</body>
+</html>

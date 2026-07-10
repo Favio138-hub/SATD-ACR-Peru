@@ -1,8 +1,16 @@
-# Salidas de trabajo por region
+# Resultados de trabajo (NO subir a GitHub)
 regiones/*/pdfs/*.pdf
 regiones/*/imagenes_sentinel/*
+!regiones/*/imagenes_sentinel/.gitkeep
 regiones/*/mapas/*
+!regiones/*/mapas/.gitkeep
 regiones/*/documentacion_atd/*
+!regiones/*/documentacion_atd/.gitkeep
+
+# Demo institucional SÍ versionar
+!regiones/*/docs/
+!regiones/*/docs/**
+
 **/__pycache__/
 **/*.pyc
 **/*.lock

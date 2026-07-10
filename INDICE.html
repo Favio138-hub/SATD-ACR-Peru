@@ -19,9 +19,17 @@
   h2 { font-size: 1.15rem; color: #1e4d7b; margin: 0 0 14px; }
   .lead {
     background: #fff; border-left: 5px solid #2F5F8F; border-radius: 0 8px 8px 0;
-    padding: 16px 18px; margin-bottom: 28px; box-shadow: 0 2px 8px rgba(30,60,90,.06);
+    padding: 16px 18px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(30,60,90,.06);
   }
   .lead p { margin: 0; line-height: 1.5; color: #334; }
+  .cta {
+    text-align: center; margin-bottom: 28px;
+  }
+  .cta a {
+    display: inline-block; background: #C62828; color: #fff; text-decoration: none;
+    font-weight: 700; padding: 12px 22px; border-radius: 8px; margin: 4px;
+  }
+  .cta a.sec { background: #2F5F8F; }
   .steps {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 32px;
   }
@@ -47,7 +55,6 @@
     background: #2F5F8F; color: #fff !important; text-decoration: none; font-weight: 600; font-size: .9rem;
   }
   .btn.alt { background: #fff; color: #2F5F8F !important; border: 2px solid #2F5F8F; }
-  .btn:hover { opacity: .92; }
   .tools {
     background: #fff; border-radius: 10px; padding: 22px; margin-top: 28px;
     box-shadow: 0 2px 8px rgba(30,60,90,.08);
@@ -72,8 +79,13 @@
 
 <div class="wrap">
   <div class="lead">
-    <p><strong>¿Para quién es?</strong> Para el personal de cada ACR que necesita bajar alertas, revisarlas con satélite y sacar el informe PDF.
-    Elija su región abajo y abra la guía. No necesita ser programador.</p>
+    <p><strong>¿Para quién es?</strong> Personal de cada ACR: bajar alertas, revisarlas con satélite y sacar el informe PDF.
+    El flujo es <strong>igual en las tres regiones</strong>. No necesita ser programador.</p>
+  </div>
+
+  <div class="cta">
+    <a href="docs/GUIA_VISUAL.html">Abrir guía visual (H1 · H2 · H3 con capturas)</a>
+    <a class="sec" href="docs/GUIA_VISUAL.html#peso">¿Por qué pesa ~3 GB?</a>
   </div>
 
   <h2>El trabajo en 3 pasos</h2>
@@ -88,27 +100,28 @@
     <article class="card" style="border-top:5px solid #1565C0">
       <h3>Loreto</h3>
       <p class="acr">ACR09 Ampiyacu · ACR04 Tamshiyacu Tahuayo · ACR17 Maijuna Kichwa · ACR10 Alto Nanay<br/>
-      Paquete de referencia del sistema (más completo).</p>
-      <a class="btn" href="regiones/ATD_Loreto/guia/GUIA_ATD_LORETO.html">Abrir guía</a>
+      Paquete de referencia (más documentado). Flujo igual que las otras regiones.</p>
+      <a class="btn" href="regiones/ATD_Loreto/guia/GUIA_ATD_LORETO.html">Guía regional</a>
       <a class="btn alt" href="regiones/ATD_Loreto/docs/EJEMPLO_reporte_ATD_Loreto.pdf">PDF ejemplo</a>
-      <a class="btn alt" href="regiones/ATD_Loreto/">Ir a carpeta</a>
+      <a class="btn alt" href="docs/GUIA_VISUAL.html">Guía visual</a>
     </article>
 
     <article class="card" style="border-top:5px solid #2E7D32">
       <h3>San Martín</h3>
       <p class="acr">ACR01 Cordillera Escalera (CE) · ACR21 BOSHUMI<br/>
       Incluye GDB de monitoreo y cartografía ZEE.</p>
-      <a class="btn" href="regiones/ATD_San_Martin/guia/GUIA_ATD_SAN_MARTIN.html">Abrir guía</a>
+      <a class="btn" href="regiones/ATD_San_Martin/guia/GUIA_ATD_SAN_MARTIN.html">Guía regional</a>
       <a class="btn alt" href="regiones/ATD_San_Martin/docs/EJEMPLO_reporte_ATD_San_Martin.pdf">PDF ejemplo</a>
-      <a class="btn alt" href="regiones/ATD_San_Martin/">Ir a carpeta</a>
+      <a class="btn alt" href="docs/GUIA_VISUAL.html">Guía visual</a>
     </article>
 
     <article class="card" style="border-top:5px solid #6A1B9A">
       <h3>Cusco</h3>
-      <p class="acr">ACR07 Choquequirao · ACR26 Chuyapi Urusayhua · ACR30 Q'eros Kosnipata</p>
-      <a class="btn" href="regiones/ATD_Cuzco/guia/GUIA_ATD_CUZCO.html">Abrir guía</a>
+      <p class="acr">ACR07 Choquequirao · ACR26 Chuyapi Urusayhua · ACR30 Q'eros Kosnipata<br/>
+      Mismo flujo H1 → H2 → H3.</p>
+      <a class="btn" href="regiones/ATD_Cuzco/guia/GUIA_ATD_CUZCO.html">Guía regional</a>
       <a class="btn alt" href="regiones/ATD_Cuzco/docs/EJEMPLO_reporte_ATD_Cuzco.pdf">PDF ejemplo</a>
-      <a class="btn alt" href="regiones/ATD_Cuzco/">Ir a carpeta</a>
+      <a class="btn alt" href="docs/GUIA_VISUAL.html">Guía visual</a>
     </article>
   </div>
 
@@ -123,10 +136,9 @@
   </div>
 
   <p class="note">
-    <strong>Documentación Loreto 2026:</strong>
-    <a href="docs/cuadro_causas_deforestacion_loreto_2026.png">Causas de deforestación</a> ·
-    <a href="docs/grafico_alertas_atd_acr_loreto_2026.png">Gráfico de alertas</a><br/>
-    Tamaño del sistema completo ≈ <strong>2,9 GB</strong> (la mayor parte son las geodatabases).
+    <strong>Peso:</strong> Loreto solo ≈ 25–35 MB; el sistema de 3 regiones ≈ 2,9 GB porque Cusco (~316 MB)
+    y la ZEE de San Martín (~494 MB) son geodatabases grandes — no porque se suban resultados de trabajo.
+    Detalle: <a href="docs/GUIA_VISUAL.html#peso">ver explicación</a>.
   </p>
 
   <footer>GFP Subnacional 2026 · ArcGIS Pro 3.x · Uso institucional ATD ACR</footer>

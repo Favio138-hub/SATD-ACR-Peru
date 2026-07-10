@@ -14,14 +14,15 @@
 </p>
 
 <p align="center">
-  <a href="INDICE.html"><strong>Abrir el índice del sistema (recomendado)</strong></a>
+  <a href="docs/GUIA_VISUAL.html"><strong>Abrir guía visual completa (con capturas H1 · H2 · H3)</strong></a><br/>
+  <a href="INDICE.html">Índice del sistema</a>
 </p>
 
 <p align="center">
   <a href="#para-quién-es">Para quién es</a> ·
   <a href="#cómo-trabajar-en-3-pasos">Cómo trabajar</a> ·
-  <a href="#regiones">Regiones</a> ·
-  <a href="#loreto-en-detalle">Loreto en detalle</a> ·
+  <a href="#las-tres-regiones">Las 3 regiones</a> ·
+  <a href="#por-qué-pesa-tanto">¿Por qué pesa?</a> ·
   <a href="#qué-incluye-cada-paquete">Qué incluye</a>
 </p>
 
@@ -29,157 +30,136 @@
 
 ## Para quién es
 
-Este sistema está pensado para **personal de las ACR** y equipos de monitoreo regional que necesitan:
+Este sistema es para el **personal de las ACR** y equipos de monitoreo regional.  
+No necesita ser programador: solo **ArcGIS Pro** y seguir la guía de su región.
 
-1. Bajar las alertas de deforestación  
-2. Revisarlas con imágenes satelitales  
+En las **tres regiones** el trabajo es el mismo:
+
+1. Bajar alertas  
+2. Revisarlas con satélite  
 3. Generar el **informe PDF oficial**
-
-No necesita ser programador. Solo necesita **ArcGIS Pro** y seguir la guía de su región.
 
 ---
 
 ## Cómo trabajar (en 3 pasos)
 
-En **todas** las regiones el flujo es el mismo:
-
 | Paso | Herramienta | Qué hace usted |
-|:----:|-------------|---------------|
-| **1** | **H1 — Descarga Geobosques** | Trae las alertas del periodo y las guarda en la base de datos de su región |
-| **2** | **H2 — Visor satelital** | Compara imágenes *antes* y *después*, clasifica la alerta (antrópico, natural o falsa alerta) |
-| **3** | **H3 — Reporte PDF** | Genera el informe institucional listo para entregar |
+|:----:|-------------|----------------|
+| **1** | **H1 — Geobosques** | Descarga alertas del periodo a la base de datos |
+| **2** | **H2 — Visor satelital** | Compara ANTES / DESPUÉS y clasifica la alerta |
+| **3** | **H3 — Reporte PDF** | Genera el informe técnico institucional |
 
 ```text
   Alertas Geobosques  →  Fotointerpretación  →  Informe PDF
          (H1)                   (H2)                (H3)
 ```
 
-### Primera vez (instalación simple)
+### Guía visual (recomendado)
 
-1. Descargue este repositorio (**Code → Download ZIP**) o clónelo.  
-2. Abra el archivo [`INDICE.html`](INDICE.html) y elija **su región**.  
-3. En ArcGIS Pro, abra **solo la carpeta de su región** (por ejemplo `regiones/ATD_Loreto/`).  
-4. En **Catálogo → Toolboxes → Add Toolbox**, agregue los tres archivos de la carpeta `toolbox/`.  
-5. Ejecute `DIAGNOSTICO_ENTORNO.bat` (está en la carpeta de su región).  
-6. Abra la **guía HTML** de su región y siga el ejemplo.
+Abra la **[guía visual completa](docs/GUIA_VISUAL.html)**: muestra capturas reales de H1, del visor H2 y del PDF final H3, con el mismo flujo para San Martín, Loreto y Cusco.
 
-> **Importante:** no mueva solo la carpeta `toolbox/` a otro sitio. Trabaje siempre con la carpeta completa de la región (datos + logos + herramientas juntos).
+<p align="center">
+  <img src="docs/guia/guia_h1_descarga_geobosques.png" alt="H1 Descarga Geobosques" width="520" />
+</p>
+<p align="center"><em>H1 — Descarga de alertas en ArcGIS Pro</em></p>
+
+<p align="center">
+  <img src="docs/guia/guia_h2_visor_antes_despues.png" alt="H2 Visor satelital" width="720" />
+</p>
+<p align="center"><em>H2 — Visor satelital ANTES / DESPUÉS</em></p>
+
+<p align="center">
+  <img src="docs/guia/guia_h3_reporte_pdf.png" alt="H3 Reporte PDF" width="720" />
+</p>
+<p align="center"><em>H3 — Reporte PDF institucional (resultado final)</em></p>
+
+### Primera vez
+
+1. Descargue el repositorio (**Code → Download ZIP**) o clónelo.  
+2. Abra [`INDICE.html`](INDICE.html) y elija **su región**.  
+3. En ArcGIS Pro abra **solo la carpeta de esa región**.  
+4. **Catálogo → Toolboxes → Add Toolbox** → agregue H1, H2 y H3.  
+5. Ejecute `DIAGNOSTICO_ENTORNO.bat`.  
+6. Siga la [guía visual](docs/GUIA_VISUAL.html) o la guía HTML de su región.
+
+> **Importante:** no mueva solo `toolbox/`. Trabaje siempre con la carpeta completa de la región.
 
 ---
 
-## Regiones
+## Las tres regiones
 
-| Región | ACR incluidas | Carpeta de trabajo | Guía | PDF de ejemplo |
-|--------|---------------|--------------------|------|----------------|
-| **Loreto** | Ampiyacu Apayacu, Tamshiyacu Tahuayo, Maijuna Kichwa, Alto Nanay | [`regiones/ATD_Loreto/`](regiones/ATD_Loreto/) | [Guía Loreto](regiones/ATD_Loreto/guia/GUIA_ATD_LORETO.html) | [Ver PDF](regiones/ATD_Loreto/docs/EJEMPLO_reporte_ATD_Loreto.pdf) |
-| **San Martín** | Cordillera Escalera (CE), BOSHUMI | [`regiones/ATD_San_Martin/`](regiones/ATD_San_Martin/) | [Guía San Martín](regiones/ATD_San_Martin/guia/GUIA_ATD_SAN_MARTIN.html) | [Ver PDF](regiones/ATD_San_Martin/docs/EJEMPLO_reporte_ATD_San_Martin.pdf) |
-| **Cusco** | Choquequirao, Chuyapi Urusayhua, Q'eros Kosnipata | [`regiones/ATD_Cuzco/`](regiones/ATD_Cuzco/) | [Guía Cusco](regiones/ATD_Cuzco/guia/GUIA_ATD_CUZCO.html) | [Ver PDF](regiones/ATD_Cuzco/docs/EJEMPLO_reporte_ATD_Cuzco.pdf) |
+| Región | ACR | Carpeta | Guía | PDF ejemplo |
+|--------|-----|---------|------|-------------|
+| **Loreto** | Ampiyacu, Tamshiyacu Tahuayo, Maijuna Kichwa, Alto Nanay | [`regiones/ATD_Loreto/`](regiones/ATD_Loreto/) | [Guía](regiones/ATD_Loreto/guia/GUIA_ATD_LORETO.html) | [PDF](regiones/ATD_Loreto/docs/EJEMPLO_reporte_ATD_Loreto.pdf) |
+| **San Martín** | Cordillera Escalera (CE), BOSHUMI | [`regiones/ATD_San_Martin/`](regiones/ATD_San_Martin/) | [Guía](regiones/ATD_San_Martin/guia/GUIA_ATD_SAN_MARTIN.html) | [PDF](regiones/ATD_San_Martin/docs/EJEMPLO_reporte_ATD_San_Martin.pdf) |
+| **Cusco** | Choquequirao, Chuyapi Urusayhua, Q'eros Kosnipata | [`regiones/ATD_Cuzco/`](regiones/ATD_Cuzco/) | [Guía](regiones/ATD_Cuzco/guia/GUIA_ATD_CUZCO.html) | [PDF](regiones/ATD_Cuzco/docs/EJEMPLO_reporte_ATD_Cuzco.pdf) |
+
+Las tres tienen **toolbox H1–H2–H3**, GDB, logos, guía y PDF de ejemplo. Loreto es el paquete de referencia (más documentado), pero **el flujo es el mismo en las tres**.
+
+### Documentación visual Loreto 2026 (referencia nacional)
+
+<p align="center">
+  <img src="docs/cuadro_causas_deforestacion_loreto_2026.png" alt="Causas de deforestación ACR Loreto 2026" width="700" />
+</p>
+<p align="center">
+  <img src="docs/grafico_alertas_atd_acr_loreto_2026.png" alt="Alertas ATD Loreto 2026" width="700" />
+</p>
 
 ---
 
-## Loreto en detalle
+## ¿Por qué pesa tanto?
 
-Loreto es el paquete **más completo** del sistema: sirve de referencia para las otras regiones y para talleres GFP.
+**Pregunta frecuente:** el repo solo Loreto pesaba ~25–35 MB; ¿por qué el de 3 regiones llega a ~3 GB?
 
-### ACR de Loreto
+**Respuesta corta:** no es que se hayan subido resultados de trabajo. Loreto es liviano; **Cusco y San Martín traen geodatabases mucho más grandes**.
 
-| Código | Área de Conservación Regional |
-|--------|-------------------------------|
-| **ACR09** | Ampiyacu Apayacu |
-| **ACR04** | Comunal Tamshiyacu Tahuayo |
-| **ACR17** | Maijuna Kichwa |
-| **ACR10** | Alto Nanay Pintuyacu Chambira |
+| Qué | Peso aprox. | Nota |
+|-----|-------------|------|
+| **Repo solo Loreto** ([ATD-Loreto-GFP](https://github.com/Favio138-hub/ATD-Loreto-GFP)) | **~25–35 MB** | GDB Loreto ≈ 36 MB + toolbox + logos |
+| GDB Loreto | ≈ 36 MB | Liviana |
+| GDB San Martín (monitoreo) | ≈ 41 MB | Similar a Loreto |
+| GDB San Martín **ZEE / cartografía** | **≈ 494 MB** | La más pesada de SM |
+| GDB Cusco | **≈ 316 MB** | Histórico / capas más densas |
+| PDF de ejemplo (3 regiones) | ≈ 90 MB | Un ejemplo por región en `docs/` |
+| **Sistema completo en disco** | **≈ 2,9 GB** | Suma de lo anterior |
 
-### Qué trae el paquete Loreto
-
-| Contenido | Para qué sirve |
-|-----------|----------------|
-| **Toolbox H1, H2 y H3** | Flujo completo: descarga → fotointerpretación → PDF |
-| **GDB de línea base** (`Linea_base_deforestación_Loreto.gdb`) | Alertas vigentes (`MonitoreoDeforestacion`) e histórico (`MonitoreoDeforestacionAcumulado`), límites ACR y capas de apoyo |
-| **GDB de gestión** (`GestionACR_16012024.gdb`) | Información de gestión / lugares poblados para el PDF |
-| **Logos** (GORE, GRRNGA, GFP, SECO, Basel, logos ACR) | Encabezado institucional del informe |
-| **Guía HTML** | Paso a paso en lenguaje claro |
-| **PDF de ejemplo** | Cómo debe verse el reporte final |
-| **Gráficos 2026** | Causas de deforestación y resumen de alertas |
-
-### Flujo recomendado en Loreto
-
-| Momento | Qué hacer |
-|---------|-----------|
-| **Demo rápida (≈ 5 min)** | Saltar H1 si ya hay alertas en la GDB → abrir **H2** con 1 polígono → generar **H3** y comparar con el PDF de ejemplo |
-| **Taller / trabajo real** | **H1** descarga Geobosques → **H2** clasifica causa y confianza → **H3** Diagnóstico Pre-Vuelo + Generar Reporte |
-| **Entregable** | PDF en `pdfs/` + documentación de apoyo en `documentacion_atd/` |
-
-### Documentación visual Loreto 2026
-
-<p align="center">
-  <img src="docs/cuadro_causas_deforestacion_loreto_2026.png" alt="Causas de deforestación ACR Loreto 2026" width="720" />
-</p>
-
-<p align="center">
-  <em>Cuadro de causas de deforestación — ACR Loreto 2026</em>
-</p>
-
-<p align="center">
-  <img src="docs/grafico_alertas_atd_acr_loreto_2026.png" alt="Gráfico de alertas ATD Loreto 2026" width="720" />
-</p>
-
-<p align="center">
-  <em>Alertas ATD por ACR — Loreto 2026</em>
-</p>
-
-Más detalle operativo: [`regiones/ATD_Loreto/README.md`](regiones/ATD_Loreto/README.md) y la [guía completa](regiones/ATD_Loreto/guia/GUIA_ATD_LORETO.html).
+Los PDF e imágenes que usted genere al trabajar (`pdfs/`, `imagenes_sentinel/`, etc.) **no se suben a GitHub**.
 
 ---
 
 ## Qué incluye cada paquete
 
-Cada carpeta regional es **autocontenida** (todo lo necesario para trabajar):
+| Carpeta | ¿En GitHub? | Contenido |
+|---------|:-----------:|-----------|
+| `toolbox/` | Sí | H1, H2, H3 |
+| `GDB/` | Sí | Datos base de la región |
+| `logos/` | Sí | Logos del informe |
+| `guia/` · `docs/` | Sí | Guías + 1 PDF de ejemplo |
+| `pdfs/` | **No** | Reportes que usted genere |
+| `imagenes_sentinel/` | **No** | Exportaciones del visor |
+| `mapas/` · `documentacion_atd/` | **No** | Salidas temporales |
 
-| Carpeta | Contenido |
-|---------|-----------|
-| `toolbox/` | Herramientas H1, H2 y H3 para ArcGIS Pro |
-| `GDB/` | Bases de datos geográficas de la región |
-| `logos/` | Logos institucionales y de las ACR |
-| `guia/` | Guía de uso en HTML (abrir con el navegador) |
-| `docs/` | PDF de ejemplo (y gráficos en Loreto) |
-| `pdfs/` | Aquí se guardan los reportes que usted genere |
-| `DIAGNOSTICO_ENTORNO.bat` | Verifica que el equipo esté listo |
-
-### Estado del producto (verificado)
+### Estado verificado
 
 | Componente | Loreto | San Martín | Cusco |
 |------------|:------:|:----------:|:-----:|
 | Toolbox H1 · H2 · H3 | Sí | Sí | Sí |
 | Geodatabases | 2 | 2 | 1 |
-| Logos regionales | Sí | Sí | Sí |
+| Logos | Sí | Sí | Sí |
 | Guía HTML | Sí | Sí | Sí |
 | PDF de ejemplo | Sí | Sí | Sí |
 
-**Sí: el sistema está armado de punta a punta** (herramientas + datos + logos + guías) para las tres regiones.
-
----
-
-## Tamaño aproximado
-
-| Paquete | Peso aproximado |
-|---------|-----------------|
-| **Todo el sistema** (3 regiones) | **≈ 2,9 GB** |
-| Solo Loreto | ≈ 1,8 GB |
-| Solo San Martín | ≈ 0,7 GB |
-| Solo Cusco | ≈ 0,4 GB |
-
-> La mayor parte del peso son las **geodatabases**. En GitHub los archivos grandes van con **Git LFS**.
+**Sí: el producto está armado de punta a punta** (herramientas + datos + logos + guías) para las tres regiones.
 
 ---
 
 ## Requisitos
 
-- **ArcGIS Pro 3.x**
-- Conexión a internet para H1 (Geobosques) y para imágenes satelitales en H2  
-- *(Opcional)* clave Planet si desea usar imágenes Planet en el visor
+- ArcGIS Pro 3.x  
+- Internet para H1 (Geobosques) y para imágenes en H2  
+- *(Opcional)* clave Planet para el visor  
 
-Si algo falla al abrir las herramientas, ejecute primero `DIAGNOSTICO_ENTORNO.bat` en la carpeta de su región.
+Si algo falla: ejecute `DIAGNOSTICO_ENTORNO.bat` en la carpeta de su región.
 
 ---
 
@@ -187,8 +167,8 @@ Si algo falla al abrir las herramientas, ejecute primero `DIAGNOSTICO_ENTORNO.ba
 
 | Repositorio | Uso |
 |-------------|-----|
-| **Este** — [SATD-ACR-Peru](https://github.com/Favio138-hub/SATD-ACR-Peru) | Producto final con las **3 regiones** |
-| [ATD-Loreto-GFP](https://github.com/Favio138-hub/ATD-Loreto-GFP) | Paquete **solo Loreto** (capacitaciones / entrega regional) |
+| **Este** — [SATD-ACR-Peru](https://github.com/Favio138-hub/SATD-ACR-Peru) | Producto final **3 regiones** |
+| [ATD-Loreto-GFP](https://github.com/Favio138-hub/ATD-Loreto-GFP) | Solo Loreto (~25–35 MB) |
 
 ---
 
