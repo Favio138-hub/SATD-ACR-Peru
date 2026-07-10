@@ -1,0 +1,18 @@
+Sistema de Alertas Tempranas de Deforestación para Áreas de Conservación Regional
+Aplicación en San Martín, Loreto y Cusco
+============================================================
+
+PRODUCTO FINAL GFP SUBNACIONAL — TRES REGIONES
+
+Carpetas de trabajo (abra UNA region completa en ArcGIS Pro):
+
+  regiones/ATD_Loreto/       — 4 ACR Loreto
+  regiones/ATD_San_Martin/   — CE + BOSHUMI
+  regiones/ATD_Cuzco/        — 3 ACR Cusco
+
+Indice visual: INDICE.html
+
+Desarrollo y GDB maestras: ../Informe_ATD_preliminar/
+
+Regenerar paquete:
+  python generar_paquete_sistema_acr.py

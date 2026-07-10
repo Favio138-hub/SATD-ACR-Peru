@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema de Alertas Tempranas de Deforestación para Áreas de Conservación Regional</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #1a2b3c; background: #f4f7fa; }
+  header {
+    background: linear-gradient(135deg, #1e4d7b 0%, #2F5F8F 55%, #3d7ab5 100%);
+    color: #fff; padding: 36px 24px 32px; text-align: center;
+  }
+  header img { height: 72px; margin-bottom: 12px; }
+  h1 { font-size: 1.35rem; margin: 0 auto; max-width: 820px; line-height: 1.35; font-weight: 600; }
+  .sub { margin: 10px 0 0; opacity: .92; font-size: 1.05rem; }
+  .wrap { max-width: 960px; margin: 32px auto; padding: 0 20px 48px; }
+  h2 { font-size: 1.1rem; color: #2F5F8F; margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .card {
+    background: #fff; border-radius: 8px; padding: 20px;
+    box-shadow: 0 2px 8px rgba(30,60,90,.08);
+  }
+  .card h3 { margin: 0 0 8px; font-size: 1.2rem; }
+  .acr { color: #5a6b7d; font-size: .9rem; margin: 0 0 10px; line-height: 1.4; }
+  .path { margin: 0 0 12px; }
+  .links a { color: #2F5F8F; font-weight: 600; text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  .tools {
+    background: #fff; border-radius: 8px; padding: 20px; margin-top: 28px;
+    box-shadow: 0 2px 8px rgba(30,60,90,.08);
+  }
+  .tools table { width: 100%; border-collapse: collapse; }
+  .tools th, .tools td { border: 1px solid #d0dce8; padding: 10px; text-align: left; }
+  .tools th { background: #e8f0f8; color: #1e4d7b; }
+  footer { text-align: center; color: #7a8a9a; font-size: .85rem; margin-top: 32px; }
+</style>
+</head>
+<body>
+<header>
+  <img src="regiones/ATD_Loreto/logos/logo_gfp.png" alt="GFP Subnacional" />
+  <h1>Sistema de Alertas Tempranas de Deforestación para Áreas de Conservación Regional</h1>
+  <p class="sub">Aplicación en San Martín, Loreto y Cusco · GFP Subnacional · Suiza apoyando al Perú</p>
+</header>
+<div class="wrap">
+<h2>Seleccione su región</h2>
+<div class="grid">
+<article class="card" style="border-top:4px solid #1565C0">
+  <h3>Loreto</h3>
+  <p class="acr">ACR04 · ACR09 · ACR10 · ACR17</p>
+  <p class="path"><code>regiones/ATD_Loreto/</code></p>
+  <p class="links">
+    <a href="regiones/ATD_Loreto/guia/GUIA_ATD_LORETO.html">Guía de uso</a> ·
+    <a href="regiones/ATD_Loreto/docs/EJEMPLO_reporte_ATD_Loreto.pdf">PDF ejemplo</a> ·
+    <a href="regiones/ATD_Loreto/README.md">README</a>
+  </p>
+</article><article class="card" style="border-top:4px solid #2E7D32">
+  <h3>San Martín</h3>
+  <p class="acr">ACR01 Cordillera Escalera · ACR21 BOSHUMI</p>
+  <p class="path"><code>regiones/ATD_San_Martin/</code></p>
+  <p class="links">
+    <a href="regiones/ATD_San_Martin/guia/GUIA_ATD_SAN_MARTIN.html">Guía de uso</a> ·
+    <a href="regiones/ATD_San_Martin/docs/EJEMPLO_reporte_ATD_San_Martín.pdf">PDF ejemplo</a> ·
+    <a href="regiones/ATD_San_Martin/README.md">README</a>
+  </p>
+</article><article class="card" style="border-top:4px solid #6A1B9A">
+  <h3>Cusco</h3>
+  <p class="acr">ACR07 · ACR26 · ACR30</p>
+  <p class="path"><code>regiones/ATD_Cuzco/</code></p>
+  <p class="links">
+    <a href="regiones/ATD_Cuzco/guia/GUIA_ATD_CUZCO.html">Guía de uso</a> ·
+    <a href="regiones/ATD_Cuzco/docs/EJEMPLO_reporte_ATD_Cusco.pdf">PDF ejemplo</a> ·
+    <a href="regiones/ATD_Cuzco/README.md">README</a>
+  </p>
+</article>
+</div>
+<div class="tools">
+<h2>Herramientas ATD (cada región)</h2>
+<table>
+<tr><th>Código</th><th>Herramienta</th><th>Función</th></tr>
+<tr><td><strong>H1</strong></td><td>Descarga Geobosques</td><td>Inserta alertas en la geodatabase</td></tr>
+<tr><td><strong>H2</strong></td><td>Visor satelital</td><td>Fotointerpretación antes/después</td></tr>
+<tr><td><strong>H3</strong></td><td>Reporte PDF</td><td>Diagnóstico e informe institucional</td></tr>
+</table>
+</div>
+<p style="margin-top:20px;color:#5a6b7d;font-size:.9rem;">
+Documentación nacional (Loreto 2026):
+<a href="docs/cuadro_causas_deforestacion_loreto_2026.png">Causas de deforestación</a> ·
+<a href="docs/grafico_alertas_atd_acr_loreto_2026.png">Alertas ATD</a>
+</p>
+<footer>GFP Subnacional 2026 · ArcGIS Pro 3.x · Uso institucional ATD ACR</footer>
+</div>
+</body>
+</html>

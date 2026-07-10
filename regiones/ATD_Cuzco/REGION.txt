@@ -1,0 +1,3 @@
+region=cuzco
+titulo=Cuzco
+paquete=ATD_Cuzco

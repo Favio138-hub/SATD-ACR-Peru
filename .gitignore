@@ -1,0 +1,10 @@
+# Salidas de trabajo por region
+regiones/*/pdfs/*.pdf
+regiones/*/imagenes_sentinel/*
+regiones/*/mapas/*
+regiones/*/documentacion_atd/*
+**/__pycache__/
+**/*.pyc
+**/*.lock
+.DS_Store
+Thumbs.db

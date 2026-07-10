@@ -1,0 +1,7 @@
+pdfs/*.pdf
+imagenes_sentinel/*
+mapas/*
+documentacion_atd/*
+__pycache__/
+*.pyc
+*.lock

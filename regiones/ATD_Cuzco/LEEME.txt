@@ -1,0 +1,42 @@
+ATD GFP Subnacional — Cuzco
+==================================================
+
+Carpeta de trabajo para la region Cuzco.
+Abra esta carpeta completa en ArcGIS Pro (no mueva solo el toolbox).
+
+ESTRUCTURA
+----------
+  toolbox/              Herramientas H1, H2, H3
+  GDB/                  Geodatabases de linea base
+  logos/                Logos institucionales de esta region
+  guia/                 Guia HTML y solucion de problemas
+  pdfs/                 Reportes PDF generados
+  imagenes_sentinel/    Imagenes del visor H2
+  mapas/                Mapas exportados
+  documentacion_atd/    HTML metodologia y swipe
+
+GDB PRINCIPAL
+-------------
+  GDB/Linea_base_deforestación_Cuzco.gdb
+  FC alertas: MonitoreoDeforestacionAcumulado
+  FC historico: MonitoreoDeforestacionAcumulado
+
+ACRs EN ESTE PAQUETE
+--------------------
+  - ACR07: ACR Choquequirao
+  - ACR26: ACR Chuyapi Urusayhua
+  - ACR30: ACR Q'eros Kosnipata
+
+INICIO RAPIDO
+-------------
+  1. ArcGIS Pro > Catalog > Add Toolbox > toolbox/ATD_H1... ATD_H2... ATD_H3...
+  2. Lea guia/GUIA_ATD_CUZCO.html
+  3. H3: ejecutar Diagnostico Pre-Vuelo, luego Generar Reporte ATD
+
+NOTAS
+-----
+  * Gerencia regional usa logo propio de Cusco (no GRRNGA Loreto).
+  * Lugar poblado y OLV muestran guion — sin GDB de gestion en esta region.
+
+Si ArcGIS Pro se cierra: guia/ATD_SI_SE_CIERRA_PRO.md
+Diagnostico Python: ejecutar DIAGNOSTICO_ENTORNO.bat en esta carpeta
