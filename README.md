@@ -6,7 +6,7 @@
   <img src="regiones/ATD_Loreto/logos/logo_basel.png" alt="Basel Institute" height="72" />
 </p>
 
-<h1 align="center">Sistema de Alertas Tempranas de Deforestación<br/>para Áreas de Conservación Regional</h1>
+<h1 align="center">Alertas Tempranas de Deforestación<br/>para Áreas de Conservación Regional</h1>
 
 <p align="center">
   <strong>Aplicación en San Martín, Loreto y Cusco</strong><br/>
